@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import QueueNumbers from './Component/QueueNumbers'
+import Promote from './Component/Promote'
+import './App.css';
+import 'antd/dist/antd.css';
+import {Row, Col} from 'antd'
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {  };
+  }
+  render() {
+    return (
+      <Row style={{height: "100vh"}}>
+        <Col flex="640" style={{height: "100%"}}>
+        <QueueNumbers/>
+        </Col>
+        <Col flex="1280" style={{height: "100%"}}>
+        <Promote/>
+        </Col>
+      </Row>
+    );
+  }
 }
 
 export default App;

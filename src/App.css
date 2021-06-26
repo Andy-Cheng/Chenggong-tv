@@ -1,38 +1,46 @@
-.App {
+
+#queueNums{
+  border-right: 4px black solid;
+  height: 100%;
+
+}
+
+.queueNum{
   text-align: center;
+  font-size: 65px;
+  height: 20%;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.digit{
+  height: 20px; 
+  color: #03676D; 
+  font-weight: 800; 
+  font-size: 110px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.digitAnimate{
+  height: 20px; 
+  color: #d00000; 
+  font-weight: 800; 
+  font-size: 110px;
+  animation-name: blinker;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+#promote{
+  height: 100%;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
